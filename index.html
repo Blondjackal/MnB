@@ -45,15 +45,53 @@ canvas {
 
 <h2>P-Mentor M&B</h2>
 
-<b>Aircraft</b><br>
-BEM <input id="bem" value="456">
-Moment <input id="bemo" value="788.5"><br>
-Density <input id="density" value="0.72"><br><br>
+<style>
+.row {
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-bottom:6px;
+}
 
-<b>Payload</b><br>
-Pilot <input id="pilot" value="90">
-Pax <input id="pax" value="95">
-Bag <input id="bag" value="10"><br><br>
+.row label {
+    min-width:70px;
+}
+
+.section-title {
+    margin-top:10px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+</style>
+
+<div class="section-title">Aircraft</div>
+
+<div class="row">
+    <label>BEM</label>
+    <input id="bem" value="456">
+
+    <label>Moment</label>
+    <input id="bemo" value="788.5">
+</div>
+
+<div class="row">
+    <label>Density</label>
+    <input id="density" value="0.72">
+</div>
+
+
+<div class="section-title">Payload</div>
+
+<div class="row">
+    <label>Pilot</label>
+    <input id="pilot" value="90">
+
+    <label>Pax</label>
+    <input id="pax" value="95">
+
+    <label>Bag</label>
+    <input id="bag" value="10">
+</div>
 
 <b>Fuel</b><br>
 Fuel L <input id="fuel_l">
