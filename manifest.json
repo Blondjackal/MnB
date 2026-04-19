@@ -1,0 +1,8 @@
+{
+  "name": "P-Mentor M&B",
+  "short_name": "M&B",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212"
+}
