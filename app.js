@@ -65,11 +65,26 @@ function calc() {
     let lm_m = tom_m - trip;
     let lm_mo = tom_mo - trip * ARM_FUEL;
 
-    output.textContent = `
-ZFM ${zfm_m.toFixed(0)} ${zfm_mo.toFixed(0)}
-TOM ${tom_m.toFixed(0)} ${tom_mo.toFixed(0)}
-LM  ${lm_m.toFixed(0)} ${lm_mo.toFixed(0)}
-`;
+	let fuel_mo = fuel * ARM_FUEL;
+	let taxi_mo = -taxi * ARM_FUEL;
+	let trip_mo = -trip * ARM_FUEL;
+
+	output.textContent = `
+	ITEM     MASS   MOMENT
+	-----------------------
+	BEM      ${bm.toFixed(0)}   ${bmo.toFixed(0)}
+	FRONT    ${front.toFixed(0)}   ${front_mo.toFixed(0)}
+	BAG      ${bag_v.toFixed(0)}   ${bag_mo.toFixed(0)}
+
+	ZFM      ${zfm_m.toFixed(0)}   ${zfm_mo.toFixed(0)}
+	FUEL     ${fuel.toFixed(0)}   ${fuel_mo.toFixed(0)}
+	TAXI     ${(-taxi).toFixed(0)}   ${taxi_mo.toFixed(0)}
+
+	TOM      ${tom_m.toFixed(0)}   ${tom_mo.toFixed(0)}
+	TRIP     ${(-trip).toFixed(0)}   ${trip_mo.toFixed(0)}
+
+	LM       ${lm_m.toFixed(0)}   ${lm_mo.toFixed(0)}
+	`;
 
     draw(zfm_m, zfm_mo, tom_m, tom_mo, lm_m, lm_mo);
 }
